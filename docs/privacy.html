@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade — Aplicativo Garagem</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background-color: #1C1C1C;
+      border: 1px solid #263238;
+      border-radius: 16px;
+      padding: 36px;
+    }
+    h1 { color: #64B5F6; margin-top: 0; }
+    h2 { color: #64B5F6; font-size: 18px; margin-top: 28px; }
+    p, li { color: #CCCCCC; font-size: 15px; }
+    a { color: #64B5F6; text-decoration: none; }
+    .meta { color: #9E9E9E; font-size: 13px; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Política de Privacidade — Aplicativo Garagem</h1>
+    <div class="meta">Última atualização: 09 de novembro de 2026 • Versão 1.0.0</div>
+
+    <p>O aplicativo <strong>Garagem</strong> respeita a sua privacidade e opera sob arquitetura sem servidores intermediários (<em>Zero-Server Architecture</em>). Não coletamos, armazenamos em servidores próprios, vendemos ou compartilhamos dados pessoais com terceiros.</p>
+
+    <h2>1. Dados Acessados via Conta Google (OAuth 2.0)</h2>
+    <ul>
+      <li><strong>Perfil básico (<code>openid</code>, <code>userinfo.email</code>, <code>userinfo.profile</code>):</strong> usado exclusivamente para exibir seu nome, e-mail e foto dentro do aplicativo.</li>
+      <li><strong>Arquivos criados pelo app no Google Drive (<code>https://www.googleapis.com/auth/drive.file</code>):</strong> usado exclusivamente para salvar e restaurar o arquivo de backup <code>garagem_backup.db</code> na pasta <code>Garagem App - Backup</code> dentro do seu próprio Google Drive. O aplicativo não acessa nenhum outro arquivo do seu Google Drive.</li>
+    </ul>
+
+    <h2>2. Armazenamento e Segurança</h2>
+    <p>Os dados dos seus veículos e manutenções ficam salvos localmente no seu dispositivo (<code>garagem.db</code>) e sincronizados diretamente com a sua conta do Google Drive via conexão criptografada HTTPS.</p>
+
+    <h2>3. Exclusão de Dados e Revogação de Acesso</h2>
+    <p>Você pode desconectar sua conta a qualquer momento no menu superior direito do aplicativo (<em>Trocar Conta / Sair</em>), excluir a pasta <code>Garagem App - Backup</code> diretamente no seu Google Drive ou revogar o acesso em <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</p>
+
+    <p style="margin-top: 32px;"><a href="index.html">← Voltar para a Página Inicial</a></p>
+  </div>
+</body>
+</html>

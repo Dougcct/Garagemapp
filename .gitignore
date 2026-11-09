@@ -1,0 +1,24 @@
+# Credenciais e Tokens OAuth (NUNCA versionar no Git!)
+credentials.json
+client_secret_*.json
+token.json
+.env
+
+# Banco de dados local do usuário e backups temporários
+garagem.db
+*.db
+*.db.bak
+*.sqlite
+*.sqlite3
+
+# Bytecode e ambientes virtuais Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Configurações locais de IDE
+.vscode/
+.idea/
