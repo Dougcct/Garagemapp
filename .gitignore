@@ -10,6 +10,7 @@ garagem.db
 *.db.bak
 *.sqlite
 *.sqlite3
+dossie_veiculo_*.html
 
 # Bytecode e ambientes virtuais Python
 __pycache__/

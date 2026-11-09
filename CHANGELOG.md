@@ -7,6 +7,26 @@ e este projeto adere ao [Versionamento Semântico (SemVer)](https://semver.org/l
 
 ---
 
+## [2.0.0] - 2026-11-09
+
+### Adicionado
+- **Fase 1 (CRUD Completo de Veículos e Ficha Técnica Interativa)**:
+  - Edição e exclusão de veículos diretamente pelo menu de 3 pontos nos cards do carrossel.
+  - Ações diretas nos cards da *Ficha Técnica*: botões **Concluir** (dar baixa antes do alerta) e **Editar/Excluir** item preventivo.
+- **Fase 2 (Controle Financeiro `R$`, Oficina e Manutenções Corretivas/Avulsas)**:
+  - Campos de **Valor (`R$`)** e **Oficina/Local** ao dar baixa em manutenções.
+  - Botão **+ Avulsa** na aba *Histórico* para lançar serviços corretivos imprevistos.
+  - Painel de resumo financeiro no topo do *Histórico*, busca por texto, filtro **Todos vs Só Veículo Ativo** e botão de exclusão de registros.
+- **Fase 3 (Alertas Híbridos por KM + Prazo em Meses)**:
+  - Suporte a `intervalo_meses` nas preventivas, alertando pelo critério que vencer primeiro (quilometragem ou tempo).
+- **Fase 4 (Abastecimento e Consumo Médio `km/L`)**:
+  - Nova 4ª aba **Abastecer** + botão rápido de posto ao lado do campo de KM na *Home*.
+  - Cálculo automático de **Média Geral (`km/L`)**, **Último Consumo (`km/L`)**, **Preço Médio por Litro** e sincronização automática do odômetro.
+- **Fase 5 (Dossiê de Manutenção para Revenda)**:
+  - Botão **Dossiê** na *Ficha Técnica* com resumo formatado para WhatsApp e gerador de relatório HTML/PDF pronto para impressão.
+
+---
+
 ## [1.0.0] - 2026-11-09
 
 ### Adicionado
