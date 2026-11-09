@@ -1,4 +1,4 @@
-# Garagem — Gestão de Manutenção Preventiva Veicular
+# <img src="assets/icon.png" width="44" align="center" alt="Garagem Icon"> Garagem — Gestão de Manutenção Preventiva Veicular
 
 ![Versão](https://img.shields.io/badge/version-1.0.0-64B5F6)
 ![Python](https://img.shields.io/badge/python-3.12%2B-blue)

@@ -1,7 +1,13 @@
+import os
 import threading
 import flet as ft
 import database as db
 import auth_google
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ASSETS_DIR = os.path.join(BASE_DIR, "assets")
+ICON_PNG_PATH = os.path.join(ASSETS_DIR, "icon.png")
+ICON_ICO_PATH = os.path.join(ASSETS_DIR, "icon.ico")
 
 # Compatibilidade entre versões do Flet (0.24+ e 1.x)
 Icons = getattr(ft, "Icons", getattr(ft, "icons", None))
@@ -64,6 +70,8 @@ def main(page: ft.Page) -> None:
     page.window.height = 820
     page.window.min_width = 360
     page.window.min_height = 680
+    if os.path.exists(ICON_ICO_PATH):
+        page.window.icon = ICON_ICO_PATH
     page.theme = ft.Theme(
         use_material3=True,
         color_scheme_seed="#64B5F6",
@@ -227,44 +235,18 @@ def main(page: ft.Page) -> None:
     # ROTA 1: /login
     # =========================================================================
     def construir_view_login() -> ft.View:
-        # Ícone vetorial estilizado de garagem com chave mecânica em ft.Stack
+        # Ícone principal oficial do sistema (Garagem App)
         icone_garagem_stack = ft.Container(
-            width=112,
-            height=112,
-            border_radius=28,
-            bgcolor="#1A2228",
-            border=Border.all(1.5, "#263238"),
+            width=132,
+            height=132,
+            border_radius=26,
+            bgcolor="#121212",
             alignment=ALIGN_CENTER,
-            content=ft.Stack(
-                width=84,
-                height=84,
-                controls=[
-                    # Ícone de garagem ao fundo em azul claro
-                    ft.Container(
-                        alignment=ALIGN_CENTER,
-                        content=ft.Icon(
-                            Icons.GARAGE_OUTLINED,
-                            size=72,
-                            color="#64B5F6",
-                        ),
-                    ),
-                    # Badge com chave mecânica sobreposto no canto inferior direito
-                    ft.Container(
-                        right=0,
-                        bottom=0,
-                        width=36,
-                        height=36,
-                        border_radius=18,
-                        bgcolor="#263238",
-                        border=Border.all(2, "#121212"),
-                        alignment=ALIGN_CENTER,
-                        content=ft.Icon(
-                            Icons.BUILD_ROUNDED,
-                            size=18,
-                            color="#B0BEC5",
-                        ),
-                    ),
-                ],
+            content=ft.Image(
+                src=ICON_PNG_PATH,
+                width=128,
+                height=128,
+                border_radius=24,
             ),
         )
 
@@ -1327,16 +1309,14 @@ def main(page: ft.Page) -> None:
                 vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
                     ft.Row(
-                        spacing=8,
+                        spacing=10,
                         vertical_alignment=ft.CrossAxisAlignment.CENTER,
                         controls=[
-                            ft.Container(
-                                width=34,
-                                height=34,
-                                border_radius=10,
-                                bgcolor="#1E272C",
-                                alignment=ALIGN_CENTER,
-                                content=ft.Icon(Icons.GARAGE_ROUNDED, color="#64B5F6", size=20),
+                            ft.Image(
+                                src=ICON_PNG_PATH,
+                                width=36,
+                                height=36,
+                                border_radius=8,
                             ),
                             ft.Text(
                                 "Garagem",
@@ -1446,6 +1426,6 @@ def main(page: ft.Page) -> None:
 
 if __name__ == "__main__":
     if hasattr(ft, "run"):
-        ft.run(main)
+        ft.run(main, assets_dir=ASSETS_DIR)
     else:
-        ft.app(target=main)
+        ft.app(target=main, assets_dir=ASSETS_DIR)
